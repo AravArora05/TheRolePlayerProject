@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
+
+.github-icon:hover, .linkedin-icon:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 hr {
   border: 1.5px solid navy;
 }
@@ -41,6 +45,7 @@ body {
   margin-right: 5%;
   padding: 5px;
   padding-left: 0px;
+  padding-top: 8px;
 }
 
 .main-nav ul.nav-list li.nav-item a.nav-link {
@@ -48,58 +53,6 @@ body {
   font-weight: bold;
   text-decoration: none;
   font-size: 17px;
-}
-
-.featured-article {
-  width: 80%;
-  margin: 0px auto;
-  display: grid;
-  padding-top: 5px;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 2fr;
-  grid-template-areas: 
-    "a b"
-    "a c";
-  max-height: 450px;
-  align-items: start; 
-  justify-items: start;
-  font-family: 'Roboto', sans-serif;
-}
-
-.featured-article img.featured-image {
-  height: 100%;
-  width: 100%;
-  grid-area: a;
-  object-fit: cover;
-  object-position: top;
-}
-
-.featured-article h3.category {
-  grid-area: b;
-  align-self: end;
-  font-family: 'Orbitron', sans-serif; 
-  font-size: 12px;
-  padding-bottom: 5px;
-  margin-left: 15px;
-}
-
-.featured-article div.article-content {
-  grid-area: c;
-  font-family: 'Roboto', sans-serif;
-  margin-left: 15px;
-  margin-top: 0px; 
-}
-
-.featured-article div.article-content h1.article-title {
-  font-size: 2.1em;
-}
-
-.featured-article div.article-content h4.author {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  color: black;
-  margin-top: 3px;
-  margin-bottom: 3px;
 }
 
 .latest-stories {
@@ -111,7 +64,17 @@ body {
   margin-top: 20px;
 }
 
-.story {
+.latest-stories h2 {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.8em;
+}
+.latest-stories h4 {
+    font-size: 1.5em;
+}
+
+
+
+.story, .author-preview {
   text-align: left;
   display: grid; 
   grid-template-columns: 1fr 3fr;
@@ -122,7 +85,26 @@ body {
   width: 100%; 
   border-bottom: 1.5px solid navy; 
 }
+.author-preview {
+  grid-template-rows: 120px;
+  grid-template-columns: auto 4fr;
+}
+.author-preview h4 {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin: 5px 0;
+} 
+.author-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
 
+.author-preview .container {
+  padding-left: 10px;
+}
 .story img.story-image {
   grid-area: a;
   width: 100%;
@@ -159,6 +141,7 @@ body {
   font-size: 1.2em;
   margin-top: 0px important!;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .story div.story-content h4.story-date,
@@ -196,42 +179,6 @@ body {
   .site-header {
     width: 90%;
   }
-  .featured-article {
-  width: 90%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 20px auto;
-  grid-template-areas: 
-    "a a"
-    "b b"
-    "c c";
-}
-.featured-article h3.category {
-  grid-area: b;
-  align-self: start;
-  font-family: 'Orbitron', sans-serif; 
-  font-size: 12px;
-  padding-top: 5px;
-  margin-left: 10px;
-}
-
-.featured-article div.article-content {
-  grid-area: c;
-  align-self: start;
-  margin-left: 10px;
-}
-
-.featured-article div.article-content h1.article-title {
-  font-size: 1.8em;
-}
-
-.featured-article div.article-content h4.author {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
-  color: black;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
 .latest-stories {
   width: 90%;
   margin: 0px auto;
@@ -239,6 +186,12 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #333;
   margin-top: 20px;
+}
+.latest-stories h2 {
+  font-size: 24px;
+}
+.latest-stories h4 {
+  font-size: 18px;
 }
 
 .story {
@@ -266,6 +219,7 @@ body {
   font-size: 0.8em;
   margin-top: 0px important!;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .story div.story-content h4.story-date,
@@ -278,4 +232,21 @@ body {
 .header {
   overflow: hidden;
 }
+
+.story img.story-image {
+  grid-area: a;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.author-preview h3 {
+  font-size: 14px;
+}
+.author-preview h4 {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin: 5px 0;
+} 
 }
